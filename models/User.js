@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
 
@@ -13,7 +13,7 @@ const userSchema = mongoose.Schema({
     },
     password:{
         type:String,
-        maxlength:5
+        minlength:5
     },
     lastname:{
         type:String,
@@ -38,4 +38,4 @@ const userSchema = mongoose.Schema({
 //스키마를 모델로 감싸줌
 const User = mongoose.model('User',userSchema)
 //이 모델을 다른파일에서도 쓰고싶으니깐
-module.exports ={User}
+module.exports ={ User };
